@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="grid-1"></div>
+    <div class="grid-2">
+        <mat-card><br><br>
+            <mat-card-title style="text-align:center"><h1><b>Register</b></h1></mat-card-title><br><br>
+            <mat-card-content>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" color="accent">
+                      <mat-label>Email</mat-label>
+                      <input matInput placeholder="example@gmail.com" name="email" [(ngModel)]= "user.email">
+                    </mat-form-field><br><br>
+                  
+                    <mat-form-field class="example-full-width" color="accent" >
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="example" name="username" [(ngModel)]= "user.username">
+                      </mat-form-field><br><br>
+
+                    <mat-form-field class="example-full-width" color="accent">
+                      <mat-label>Password</mat-label>
+                      <input matInput placeholder="password" type="password" name="password" [(ngModel)]= "user.password">
+                    </mat-form-field>
+                  </form><br>
+                  <a routerLink="/login">Already a member ? Login</a>
+
+                  <br><br>
+
+                  <button (click)="register()" style="width: 100%;" mat-raised-button color="accent">submit</button>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="grid-3"></div>
+    
+</div>

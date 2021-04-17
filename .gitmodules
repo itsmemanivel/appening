@@ -1,0 +1,6 @@
+[submodule "backend-deploy"]
+	path = backend-deploy
+	url = https://github.com/veluvj/appening-backend.git
+[submodule "appening-backend"]
+	path = appening-backend
+	url = https://github.com/veluvj/appening-backend.git

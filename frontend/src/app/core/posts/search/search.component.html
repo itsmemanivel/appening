@@ -1,0 +1,30 @@
+<mat-toolbar *ngIf="state" color="primary" style="position: fixed; z-index: 1;top:0">
+    <button routerLink="/home" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon  >arrow_back</mat-icon>
+    </button>
+    <!-- <span>Appening</span> -->
+    <span class="example-spacer"></span>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon routerLink="/search"  >search</mat-icon>
+    </button> -->
+
+    <input [(ngModel)]="data" placeholder="search Title or Content" class="example-icon input-icon favorite-icon" aria-label="Example icon-button with heart icon" type="text" (input)="searchText(data)">
+</mat-toolbar>
+
+
+<div class="container">
+    <div *ngIf="!error" class="query-posts">
+        <mat-card *ngFor="let post of posts">
+            <img style="height: 70%;object-fit: cover;" mat-card-image src="{{post.imageURL}}" alt="">
+            <mat-card-title>{{post.title}}</mat-card-title>
+            <mat-card-content>{{(post.content.length>6)? (post.content | slice:0:50)+'...':(post.content)}}</mat-card-content>
+        </mat-card>
+        
+    </div>
+    <br><br>
+    <div *ngIf="error" class="error">
+        <div class="alert alert-danger" role="alert">
+            No Results Found!!!
+          </div>
+    </div>
+</div>

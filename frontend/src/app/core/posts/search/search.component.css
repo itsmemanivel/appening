@@ -1,0 +1,29 @@
+.query-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.query-posts > mat-card {
+
+    width: 300px;
+    height: 200px;
+    margin: 5% 0%;
+}
+
+mat-toolbar {
+    box-shadow: 5px 5px 5px rgba(39, 39, 39, 0.178);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.input-icon {
+    width: 500px;
+    border-radius: 15px;
+    border: none;
+    padding: 0% 1%;
+}

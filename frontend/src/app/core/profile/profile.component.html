@@ -1,0 +1,56 @@
+<br><br><br>
+<div class="container">
+    <div class="grid-1">
+        <div class="profile-pic">
+            <img style="border-radius: 50%;" src="assets/images/avatar.jpeg" alt="">
+        </div>
+        <br><br><br>
+
+            <button (click)="logout()"  mat-fab color="accent" aria-label="Example icon button with a home icon">
+                <mat-icon>logout</mat-icon>
+            </button>
+
+            
+        
+    </div>
+    <div class="grid-2">
+        <div class="profile-text">
+            <mat-card style="width: 100%;">
+                <form *ngIf="user[0]" class="example-form"><br>
+                    <mat-form-field  class="example-full-width" color="accent">
+                      <input  style="width: 100%;font-size: 2em;" matInput placeholder="Username" name="username" [(ngModel)]="user[0].username"  >
+                    </mat-form-field><br><br>
+                  
+                    <mat-form-field class="example-full-width" color="accent">
+                        <input style="width: 100%;font-size: 2em;" matInput placeholder="Email" name="email" [(ngModel)]='user[0].email'  >
+                      </mat-form-field><br><br>
+
+                    <mat-form-field class="example-full-width" color="accent">
+                      <input style="width: 100%;font-size: 2em;" matInput placeholder="Password"  name="password" [(ngModel)]='user[0].password' >
+                    </mat-form-field><br>
+                </form>
+
+
+                <form *ngIf="!user[0]"><br>
+                    <mat-form-field *ngIf="!user[0]" class="example-full-width" color="accent">
+                        <input  style="width: 100%;" matInput placeholder="username" name="username"   >
+                      </mat-form-field><br><br>
+                    
+                      <mat-form-field class="example-full-width" color="accent">
+                          <input  matInput placeholder="example@gmail.com" name="email"  >
+                        </mat-form-field><br><br>
+  
+                      <mat-form-field class="example-full-width" color="accent">
+                        <input  matInput placeholder="password"  name="password"  >
+                      </mat-form-field><br>
+                </form>
+            </mat-card><br><br>
+
+            <div class="btn-flex">
+                <button (click)="updateProfile()" style="width: 50%;" mat-raised-button color="secondary">update</button>
+                <button (click)="deleteProfile()" style="width: 50%;" mat-raised-button color="warn">delete</button>
+            </div>
+
+        </div>
+    </div>
+</div>

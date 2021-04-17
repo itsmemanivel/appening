@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="grid-1">
+        <div class="example-button-container">
+            <button (click)="openDialog()" mat-fab color="accent" aria-label="Example icon button with a home icon">
+              <mat-icon>add</mat-icon>
+            </button>
+        </div>   
+        <div style="top: 30%;" class="example-button-container">
+            <button mat-fab color="accent" aria-label="Example icon button with a home icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+        </div>   
+        <div style="top: 40%;" class="example-button-container">
+            <button mat-fab color="accent" aria-label="Example icon button with a home icon">
+              <mat-icon>bookmark</mat-icon>
+            </button>
+        </div>    
+    </div>
+    <div class="grid-2">
+        <div class="posts-card">
+            <mat-card *ngFor="let post of posts | reverse">
+                <img style="height: 70%;object-fit: cover;" mat-card-image src="{{post.imageURL}}" alt="">
+                <mat-card-title>{{post.title}}</mat-card-title>
+                <mat-card-content>{{(post.content.length>6)? (post.content | slice:0:200)+'...':(post.content)}}</mat-card-content>
+                
+            </mat-card>
+            <!-- <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card>
+            <mat-card>
+                <mat-card-title>Hello!</mat-card-title>
+                <mat-card-content>content</mat-card-content>
+            </mat-card> -->
+        </div>
+    </div>
+    <div class="grid-3">
+        <!-- <mat-card></mat-card> -->
+    </div>
+    
+</div>
